@@ -1,0 +1,39 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input{
+
+    outline: none;
+    border: 2px solid darkcyan;
+    border-radius: 5px;
+
+    padding: 5px;
+}
+
+.form button{
+
+    color: ghostwhite;
+
+    background-color: darkcyan;
+
+    border: none;
+    border-radius: 5px;
+
+    outline: none;
+    
+    padding: 5px;
+
+}
+
+.error{
+    display: none;
+    color: red;
+}
+
+.error.active{
+    display: inline;
+}
+
