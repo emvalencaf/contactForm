@@ -1,4 +1,4 @@
-import { public_key, service_id, template_id, api_url } from "../config.js"
+//import { public_key, service_id, template_id, api_url } from "../config.js"
 
 
 export class ContatoService{
@@ -21,21 +21,29 @@ export class ContatoService{
 
     }
 
-    sendEmail(data, sucess, failure){
+    sendEmail(formData, sucess, failure){
         
+/*
         const body = {
             service_id: service_id,
             template_id: template_id,
             user_id: public_key,
             template_params: data
         }
-
         fetch(api_url, {
             method:"POST",
             headers:{"content-type":"application/json"},
             body: JSON.stringify(body)
         })
             .then(response => sucess())
+            .catch(err => failure())*/
+            
+        fetch('/', {
+            method: 'POST',
+            headers: {"content-type":"application/json;charset=UTF-8"},
+            body: JSON.stringify(formData)
+        })
+            .then(reponse => sucess())
             .catch(err => failure())
     }
 }

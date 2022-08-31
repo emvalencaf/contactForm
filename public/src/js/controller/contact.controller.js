@@ -27,19 +27,27 @@ export class ContatoController{
 
         if(fields.every(field => field.classList.contains("error"))) return console.log("deu errado")
 
-        const from_name = dataDOM.querySelector('[data-contato-type="nome"]').value
-        const from_email = dataDOM.querySelector('[data-contato-type="email"').value
-        const assunto =  dataDOM.querySelector('[data-contato-type="assunto"]').value
-        const textarea = dataDOM.querySelector('[data-contato-type="mensagem"]').value
-        const message = `Assunto:${assunto}.      ${textarea}`
-        
+        const name = dataDOM.querySelector('[data-contato-type="nome"]').value
+        const email = dataDOM.querySelector('[data-contato-type="email"').value
+        const subject =  dataDOM.querySelector('[data-contato-type="assunto"]').value
+        const message = dataDOM.querySelector('[data-contato-type="mensagem"]').value
+
+        //const message = `Assunto:${assunto}.      ${textarea}`
+        /*
         const mail = {
             from_name,
             from_email,
             message
+        }*/
+
+        const formData = {
+            name,
+            email,
+            subject,
+            message
         }
 
-        this.service.sendEmail(mail, () => this.view.renderSucess(), () => this.view.renderFailure())
+        this.service.sendEmail(formData, () => this.view.renderSucess(), () => this.view.renderFailure())
 
     }
 
