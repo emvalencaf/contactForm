@@ -53,6 +53,7 @@ body{
 
 textarea.input{
     margin-top: 20px;
+    resize: none;
 }
 
 .input:focus{
