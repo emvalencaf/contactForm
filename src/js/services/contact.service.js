@@ -22,7 +22,7 @@ export class ContatoService{
     }
 
     sendEmail(data, sucess, failure){
-        
+        /*
         const body = {
             service_id: service_id,
             template_id: template_id,
@@ -36,6 +36,7 @@ export class ContatoService{
             body: JSON.stringify(body)
         })
             .then(response => sucess())
-            .catch(err => failure())
+            .catch(err => failure())*/
+        sucess()
     }
 }
