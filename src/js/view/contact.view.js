@@ -5,7 +5,11 @@ export class ContatoView{
     }
 
     renderSucess(){
-        
+        this.container.innerHTML = "Sua mensagem foi enviada com sucesso, em breve entrarei com o retorno."
+    }
+
+    renderFailure(){
+        this.container.innerHTML = "Houve um erro e, portanto, sua mensagem não foi possível ser enviada."
     }
 
     renderError(msg, attribute){

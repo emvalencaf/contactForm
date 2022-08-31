@@ -1,3 +1,6 @@
+import { public_key, service_id, template_id, api_url } from "../config.js"
+
+
 export class ContatoService{
 
     validation(value, typeDomObject, minlength){
@@ -18,5 +21,21 @@ export class ContatoService{
 
     }
 
+    sendEmail(data, sucess, failure){
+        
+        const body = {
+            service_id: service_id,
+            template_id: template_id,
+            user_id: public_key,
+            template_params: data
+        }
 
+        fetch(api_url, {
+            method:"POST",
+            headers:{"content-type":"application/json"},
+            body: JSON.stringify(body)
+        })
+            .then(response => sucess())
+            .catch(err => failure())
+    }
 }
