@@ -1,32 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Contato</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
     <form class="form">
-        <label for="name">Nome <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
+        <h1>Contato</h1>
+        <label for="inputName" class="label">Nome <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
 
         <input type="text" class="input" id="inputName" placeholder="preencha esse campo com o seu nome" data-contato-type="nome" minlength="3">
         <span class="error" id="error-nome">por favor preencha um nome</span>
 
-        <label for="email">E-mail <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
+        <label for="inputEmail" class="label">E-mail <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
 
         <input type="text" id="inputEmail" class="input" placeholder="preencha esse campo com o seu e-mail" data-contato-type="email" minlength="3">
 
         <span class="error" id="error-email">por favor preencha um e-mail</span>
 
-        <label for="">Assunto <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
+        <label for="inputAssunto" class="label">Assunto <abbr title="campo obrigatório"><sup><i class="uil uil-exclamation-circle"></i></sup></abbr></label>
 
         <input type="text" class="input" id="inputAssunto" placeholder="preencha esse campo com o assunto" data-contato-type="assunto" minlength="3">
 
         <span class="error" id="error-assunto">por favor preencha um assunto</span>
 
-        <textarea name="" id="textArea" cols="30" rows="10" maxlength="1500" class="input" placeholder="preencha aqui a sua mensagem, por favor limite-se a 15000 caracteres" data-contato-type="mensagem" minlength="50"></textarea>
+        <textarea id="textArea" cols="30" rows="10" maxlength="1500" class="input" placeholder="preencha aqui a sua mensagem, por favor limite-se a 15000 caracteres" data-contato-type="mensagem" minlength="50"></textarea>
 
         <span class="error" id="error-mensagem">por favor, respeite o limite de caracteres</span>
 

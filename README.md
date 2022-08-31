@@ -17,3 +17,6 @@ Ao final será verificado no DOM se há algum campo que possui a classe error, s
 Para fazer a AJAX na API EmailJS é preciso usar a seguinte url "https://api.emailjs.com/api/v1.0/email/send" e passar no objeto de configuração da requisição o método HTTP POST e no corpo da requisição (body) o service_id, template_id, a public_key e as informações extraída do DOM - lembrando que o body deve ser convertido para uma string (JSON.stringify()). Ademais, também é necessário configurar a propriedade content-type do header da requisição para "application/json".
 
 No meu projeto a url da API, os dados do service_id, template_id e public_key, estão presente em um documento config.js, o qual não foi versionado por uma questão de segurança.
+
+
+O efeito linear-gradient do background foi criado usando o app [Animated Gradient Background Generator](https://animated-gradient-background-generator.netlify.app/) desenvolvido por [John Polacek](https://github.com/johnpolacek/animated-gradient-background-generator).

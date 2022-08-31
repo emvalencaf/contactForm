@@ -1,7 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+
+    color: rgb(34, 44, 44);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+
+    background: linear-gradient(95deg,#39ec5e,#354f9b,#3c1408,#abaefa,#df81b3);
+    background-size: 300% 300%;
+    animation: gradient-animation 35s ease infinite;
+}
+
 .form{
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    padding: 20px;
+
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(250, 235, 215, 0.773);
+
+    border-radius: 20px;
+
+    opacity: 0.7;
+}
+
+.form h1{
+    text-align: center;
+}
+
+.label{
+    text-transform: uppercase;
 }
 
 .input{
@@ -11,6 +47,12 @@
     border-radius: 5px;
 
     padding: 5px;
+
+
+}
+
+textarea.input{
+    margin-top: 20px;
 }
 
 .input:focus{
@@ -19,6 +61,9 @@
 }
 
 .btn{
+    text-transform: uppercase;
+
+    font-weight: bold;
 
     color: ghostwhite;
 
@@ -32,6 +77,15 @@
     padding: 5px;
 
     cursor: pointer;
+
+    transition: 300ms ease-in;
+
+    margin-top: 10px;
+}
+
+.btn:hover{
+
+    background-color: rgb(21, 233, 233);
 
 }
 
@@ -48,3 +102,16 @@
     border-color:hsla(0, 100%, 64%, 0.9);
     box-shadow: 0px 0px 8px hsla(16, 100%, 50%, 0.645);
 }
+
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
