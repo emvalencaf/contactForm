@@ -13,7 +13,12 @@
     padding: 5px;
 }
 
-.form button{
+.input:focus{
+    border-color:hsla(180, 29%, 70%, 0.9);
+    box-shadow: 0px 0px 8px hsl(102, 25%, 50%);
+}
+
+.btn{
 
     color: ghostwhite;
 
@@ -26,6 +31,8 @@
     
     padding: 5px;
 
+    cursor: pointer;
+
 }
 
 .error{
@@ -37,3 +44,7 @@
     display: inline;
 }
 
+.input.error.active{
+    border-color:hsla(0, 100%, 64%, 0.9);
+    box-shadow: 0px 0px 8px hsla(16, 100%, 50%, 0.645);
+}
