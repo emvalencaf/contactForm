@@ -20,3 +20,8 @@ No meu projeto a url da API, os dados do service_id, template_id e public_key, e
 
 
 O efeito linear-gradient do background foi criado usando o app [Animated Gradient Background Generator](https://animated-gradient-background-generator.netlify.app/) desenvolvido por [John Polacek](https://github.com/johnpolacek/animated-gradient-background-generator).
+
+
+### Sobre o branch back-end do projeto
+
+Nesse projeto foi desenvolvido o back-end usando o pacote nodemailer e a api do google - para autenticação - com a finalidade do servidor enviar um e-mail com os dados do formulário extraido do front-end. Para tornar o código usal é necessário passar, via variável de ambiente, o client_id, client_secret e acess_token, do aplicativo oAuth da api do google.
